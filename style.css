@@ -1,0 +1,56 @@
+* {
+  padding: 0;
+  box-sizing: border-box;
+  margin: 0;
+}
+.parent {
+  width: 100vw;
+  height: 100vh;
+}
+.sky .grass .road {
+  width: 100vw;
+}
+.sky {
+  height: 30%;
+  background-color: blue;
+}
+.grass {
+  height: 30%;
+  background-color: green;
+}
+.road {
+  height: 40%;
+  background-image: linear-gradient(360deg, rgb(0, 0, 0), rgb(127, 127, 124));
+}
+.strips {
+  border-top: 5px dashed white;
+  position: relative;
+  top: 140px;
+}
+span {
+  font-size: 100px;
+  position: relative;
+  display: inline-block;
+}
+.car {
+  
+  animation-name: drive;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+  animation-direction: reverse;/*reverse the direction*/
+  animation-timing-function: linear;/*to go in same speed*/
+}
+.bus {
+    animation-name: drive;
+    animation-duration: 9s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;/*to go in same speed*/
+}
+@keyframes drive {
+  from {
+    transform: translateX(2vw);
+  }
+  to {
+    transform: translateX(105vw);
+  }
+}
